@@ -1,0 +1,21 @@
+404 error please required all field{% extends 'back/master.html' %}
+
+{% load static %}
+{% block mainblock %}
+  <!-- Page content -->
+<h2>{{error}}</h2>
+<h1><a href="{% url 'news_add' %}">Please Click Here to Go Back </a></h1>
+<!-- END Datatables Header -->
+                        <!-- Datatables Content -->
+
+
+
+
+                    <!-- END Page Content -->
+ {% endblock %}
+
+{% block footerblock %}
+<!-- Load and execute javascript code used only in this page -->
+<script src="{% static "back/js/pages/tablesDatatables.js" %}" ></script>
+<script>$(function(){ TablesDatatables.init(); });</script>
+{% endblock %}
